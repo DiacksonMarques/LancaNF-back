@@ -8,6 +8,8 @@ import java.util.Optional;
 public interface ExpenseCategoriesService {
     List<ExpenseCategories> getAllExpenseCategories();
 
+    List<ExpenseCategories> getAllExpenseCategoriesFilter();
+
     Optional<ExpenseCategories> getByIdExpenseCategori(Long id);
 
     ExpenseCategories insertExpenseCategori(ExpenseCategories expenseCategories);

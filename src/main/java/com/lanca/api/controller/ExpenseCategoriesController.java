@@ -22,10 +22,16 @@ public class ExpenseCategoriesController {
         return expenseCategoriesService.getAllExpenseCategories();
     }
 
+    @GetMapping("/api/expense-categori-filter")
+    public List<ExpenseCategories> getAllExpenseCategoriesFilter(){
+        return expenseCategoriesService.getAllExpenseCategoriesFilter();
+    }
+
     @GetMapping("/api/expense-categori/{id}")
     public Optional<ExpenseCategories> getExpenseCategori(@PathVariable("id") Long id){
         return expenseCategoriesService.getByIdExpenseCategori(id);
     }
+
 
     @PostMapping("/api/expense-categori")
     @ResponseStatus(HttpStatus.CREATED)

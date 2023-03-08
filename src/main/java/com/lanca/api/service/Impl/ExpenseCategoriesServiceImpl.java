@@ -19,6 +19,11 @@ public class ExpenseCategoriesServiceImpl implements ExpenseCategoriesService {
     }
 
     @Override
+    public List<ExpenseCategories> getAllExpenseCategoriesFilter() {
+        return expenseCategoriesRepository.findFilterFiled();
+    }
+
+    @Override
     public Optional<ExpenseCategories> getByIdExpenseCategori(Long id) {
         return expenseCategoriesRepository.findById(id);
     }
